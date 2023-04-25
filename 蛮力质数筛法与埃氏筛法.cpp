@@ -5,15 +5,15 @@
 #include<iostream>
 #include<iomanip>
 #include<cstring>
-#include <unordered_map>//ÎÞÐò map ÈÝÆ÷
+#include <unordered_map>//æ— åº map å®¹å™¨
 
 using namespace std;
 
 const double PI = atan(1.0) * 4;
 
-static int cunt1 = 0, cunt2 = 0;//¼ÆÊý
+static int cunt1 = 0, cunt2 = 0;//è®¡æ•°
 
-void judge1(int n)//ÂùÁ¦·¨
+void judge1(int n)//è›®åŠ›æ³•
 {
 	int cunt_judge = 0;
 	if (n >= 2)
@@ -27,7 +27,7 @@ void judge1(int n)//ÂùÁ¦·¨
 		int flag = 1;
 		for (int j = 2; j*j <= i; j++)
 		{
-			cunt_judge++;//»ù±¾²Ù×÷
+			cunt_judge++;//åŸºæœ¬æ“ä½œ
 			if (i % j == 0)
 			{
 				flag = 0;
@@ -39,11 +39,11 @@ void judge1(int n)//ÂùÁ¦·¨
 			cunt1++;
 		}
 	}
-	cout << n << "ÖÐÖÊÊý¹²" << cunt1 << "¸ö" << endl;
-	cout << "ÂùÁ¦·¨»ù±¾²Ù×÷Ö´ÐÐ" << cunt_judge << "´Î" << endl;
+	cout << n << "ä¸­è´¨æ•°å…±" << cunt1 << "ä¸ª" << endl;
+	cout << "è›®åŠ›æ³•åŸºæœ¬æ“ä½œæ‰§è¡Œ" << cunt_judge << "æ¬¡" << endl;
 }
 
-void judge2(int n)//°£ÊÏÉ¸·¨
+void judge2(int n)//åŸƒæ°ç­›æ³•
 {
 	bool num[100];
 	int cunt_judge = 0;
@@ -58,7 +58,7 @@ void judge2(int n)//°£ÊÏÉ¸·¨
 		{
 			for (int j = i + i; j < n; j += i)
 			{
-				cunt_judge++;//»ù±¾²Ù×÷
+				cunt_judge++;//åŸºæœ¬æ“ä½œ
 				num[j] = 0;
 			}
 		}
@@ -71,8 +71,8 @@ void judge2(int n)//°£ÊÏÉ¸·¨
 			cout << i << endl;
 		}
 	}
-	cout << n << "ÖÐÖÊÊý¹²" << cunt2 << "¸ö" << endl;
-	cout << "°£ÊÏÉ¸·¨»ù±¾²Ù×÷Ö´ÐÐ" << cunt_judge << "´Î" << endl;
+	cout << n << "ä¸­è´¨æ•°å…±" << cunt2 << "ä¸ª" << endl;
+	cout << "åŸƒæ°ç­›æ³•åŸºæœ¬æ“ä½œæ‰§è¡Œ" << cunt_judge << "æ¬¡" << endl;
 }
 
 int main()
